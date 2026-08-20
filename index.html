@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>해비치 호텔&리조트 제주</title>
+
     <link rel="stylesheet" href="./css/fontello.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
@@ -27,9 +28,10 @@
                 <nav id="main-nav" aria-label="주요 메뉴">
                     <div class="m-header">
                         <button type="button" class="close-btn" aria-label="메뉴 닫기">
-                            <i aria-hidden="true" class="icon-close_32"></i>
+                            <i aria-hidden="true" class="icon-x"></i>
                         </button>
-                        <h1 class="m-logo"><a href="#"><img src="./images/Logo/Haevichi/White.png" alt="haevichi logo"></a></h1>
+                        <h1 class="m-logo"><a href="#"><img src="./images/Logo/Haevichi/White.png"
+                                    alt="haevichi logo"></a></h1>
                         <p class="re-right"><button class="btn btn-pri">예약하기</button></p>
                     </div>
                     <ul class="main-menu">
@@ -189,7 +191,7 @@
                             <a href="#">멤버십</a>
                         </li>
                     </ul>
-
+                    <!-- div.m-gnb-list>li*3>a[href="#"]>img+span -->
                     <div class="m-gnb-list">
                         <li><a href="#"><img src="./images/Icon/person.svg" alt=""><span>로그인</span></a></li>
                         <li><a href="#"><img src="./images/Icon/schedule.svg" alt=""><span>마이페이지</span></a></li>
@@ -265,7 +267,6 @@
                     </li>
                 </ul>
             </div>
-            
             <div class="reservation-wrap inner">
                 <div class="re-left">
                     <div>
@@ -371,6 +372,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
         <hr>
         <!-- section*6>div.inner>div.title-box>h2.section-title+div>p+p.more-btn -->
@@ -395,7 +397,8 @@
                                 <p class="offer-kind"><span class="kind">호텔</span>
                                     <span class="sale">20% 할인</span>
                                 </p>
-                                <p class="detail">위트비어 생맥주 2잔 TOGO + 수영장 무제한 위트비어 생맥주 2잔 TOGO + 수영장 무제한위트비어</p>
+                                <p class="detail">위트비어 생맥주 2잔 TOGO + 수영장 무제한 0000 0 0 0 0 0 0 0 00 0 0 0 0 0 0 0 0 위트비어
+                                    생맥주 2잔 TOGO + 수영장 무제한위트비어 생맥주 2잔 TOGO + 수영장 무제한위트비어 생맥주 2잔 TOGO + 수영장 무제한0 0</p>
                                 <p class="period">2026.07.01 ~ 2026.12.31</p>
                             </div>
                         </li>
@@ -442,7 +445,6 @@
                 </div>
             </div>
         </section>
-
         <section class="rooms-wrap">
             <div class="inner">
                 <div class="title-box" data-aos="fade-right">
@@ -751,10 +753,10 @@
                 </div>
 
                 <ul class="tab-menu">
-                    <li class="active"><a href="#">Spa & Fitness</a></li>
-                    <li><a href="#">Convenience</a></li>
-                    <li><a href="#">Kids</a></li>
-                    <li><a href="#">Gallery</a></li>
+                    <li class="active"><button>Spa & Fitness</button></li>
+                    <li><button>Convenience</button></li>
+                    <li><button>Kids</button></li>
+                    <li><button>Gallery</button></li>
                 </ul>
 
                 <div class="facility-list-wrap">
@@ -877,8 +879,8 @@
                 </div>
 
                 <ul class="tab-menu">
-                    <li class="active"><a href="#">Service</a></li>
-                    <li><a href="#">Contacts</a></li>
+                    <li class="active"><button>Service<button></li>
+                    <li><button>Contacts</button></li>
                 </ul>
 
                 <div class="concierge-list-wrap">
@@ -1051,21 +1053,18 @@
         const hotelSwiper = new Swiper('.room-type-hotel', {
             effect: 'fade',
             loop: true,
-            fadeEffect: {
-                crossFade: true
-            },
             navigation: {
                 nextEl: '.room-type-hotel .swiper-button-next',
                 prevEl: '.room-type-hotel .swiper-button-prev'
-            }
+            },
+            fadeEffect: {
+                crossFade: true // 이전 슬라이드가 사라지지 않고 겹치는 문제 해결
+            },
         });
 
         const resortSwiper = new Swiper('.room-type-resort', {
             effect: 'fade',
             loop: true,
-            fadeEffect: {
-                crossFade: true
-            },
             navigation: {
                 nextEl: '.room-type-resort .swiper-button-next',
                 prevEl: '.room-type-resort .swiper-button-prev'
@@ -1075,21 +1074,18 @@
         var diningSwiper = new Swiper('.dining-list-wrap', {
             loop: true,
             slidesPerView: 2.4,
-            spaceBetween: 24,
-            centeredSlides: true,
-            // breakpoints: {
-            //     768: {
-            //         slidesPerView: 16,
-            //         centeredSlides: true,
-            //     },
-            //     1279: {
-            //         slidesPerView: 24,
-            //         centeredSlides: true,
-            //     },
-            // },
+            spaceBetween: 12,
+            breakpoints: {
+                768: {
+                    spaceBetween: 16,
+                    centeredSlides: true,
+                },
+                1279: {
+                    spaceBetween: 24,
+                    centeredSlides: true,
+                },
+            },
         });
-
-
     </script>
 
     <!-- aos -->
